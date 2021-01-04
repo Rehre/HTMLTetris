@@ -22,3 +22,5 @@ function renderWalls() {
     CONTEXT.fillRect(...getCoordinateFromGridNumber(i, 29), ...getRectSize());
   }
 }
+
+function renderGridData(currentGrid) {}

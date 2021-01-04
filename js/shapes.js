@@ -102,7 +102,7 @@ function renderShape(x, y, shape) {
 }
 
 function checkCollision(newXCoordinate, newYCoordinate, currentShape) {
-  switch (shape) {
+  switch (currentShape) {
     case SHAPE_TYPE.I: {
       return true;
     }
@@ -122,6 +122,18 @@ function checkCollision(newXCoordinate, newYCoordinate, currentShape) {
       return true;
     }
     default: {
+      const left = newXCoordinate - 1;
+      const right = newXCoordinate;
+      const bottom = newYCoordinate;
+
+      if (bottom > 28) {
+        return false;
+      }
+
+      if (left < 1 || right > 18) {
+        return false;
+      }
+
       return true;
     }
   }
