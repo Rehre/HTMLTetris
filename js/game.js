@@ -2,7 +2,7 @@ function getRandomShape() {
   // const RNG = Math.ceil(Math.random() * 7);
 
   // return Object.keys(SHAPE_TYPE)[RNG - 1];
-  return SHAPE_TYPE.O;
+  return SHAPE_TYPE.T;
 }
 
 let currentShape = getRandomShape();

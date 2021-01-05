@@ -104,21 +104,93 @@ function renderShape(x, y, shape) {
 function checkCollision(newXCoordinate, newYCoordinate, currentShape) {
   switch (currentShape) {
     case SHAPE_TYPE.I: {
+      const left = newXCoordinate;
+      const right = newXCoordinate;
+      const bottom = newYCoordinate + 2;
+
+      if (bottom > 28) {
+        return false;
+      }
+
+      if (left < 1 || right > 18) {
+        return false;
+      }
+
       return true;
     }
     case SHAPE_TYPE.S: {
+      const left = newXCoordinate - 1;
+      const right = newXCoordinate + 1;
+      const bottom = newYCoordinate;
+
+      if (bottom > 28) {
+        return false;
+      }
+
+      if (left < 1 || right > 18) {
+        return false;
+      }
+
       return true;
     }
     case SHAPE_TYPE.Z: {
+      const left = newXCoordinate - 1;
+      const right = newXCoordinate + 1;
+      const bottom = newYCoordinate + 1;
+
+      if (bottom > 28) {
+        return false;
+      }
+
+      if (left < 1 || right > 18) {
+        return false;
+      }
+
       return true;
     }
     case SHAPE_TYPE.L: {
+      const left = newXCoordinate;
+      const right = newXCoordinate + 1;
+      const bottom = newYCoordinate + 1;
+
+      if (bottom > 28) {
+        return false;
+      }
+
+      if (left < 1 || right > 18) {
+        return false;
+      }
+
       return true;
     }
     case SHAPE_TYPE.J: {
+      const left = newXCoordinate - 1;
+      const right = newXCoordinate;
+      const bottom = newYCoordinate + 1;
+
+      if (bottom > 28) {
+        return false;
+      }
+
+      if (left < 1 || right > 18) {
+        return false;
+      }
+
       return true;
     }
     case SHAPE_TYPE.T: {
+      const left = newXCoordinate - 1;
+      const right = newXCoordinate + 1;
+      const bottom = newYCoordinate + 1;
+
+      if (bottom > 28) {
+        return false;
+      }
+
+      if (left < 1 || right > 18) {
+        return false;
+      }
+
       return true;
     }
     default: {
